@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1",
+    "telegraf": "^4.16.3"
+  },
+  "scripts": {
+    "server": "nodemon --trace-warnings server",
+    "view": "npm run dev --prefix view",
+    "start": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run view\""
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.1"
+  },
+  "name": "stakeholders_tg",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT"
+}
